@@ -12,7 +12,6 @@ public class TipCalculatorRunner {
         // import objects
         Scanner scan = new Scanner(System.in);
         DecimalFormat formatter = new DecimalFormat("#.##");
-        TipCalculator calc = new TipCalculator(numPeople, tipPercentage);
 
         // user input
         System.out.println("Welcome to the tip calculator!");
@@ -22,6 +21,7 @@ public class TipCalculatorRunner {
         System.out.print("Enter the tip percentage (0-100): ");
         tipPercentage = scan.nextInt();
         scan.nextLine();
+        TipCalculator calc = new TipCalculator(numPeople, tipPercentage);
         while (dishCost != -1) {
             System.out.print("Enter a cost in dollars and cents (-1 to end): ");
             dishCost = scan.nextDouble();
